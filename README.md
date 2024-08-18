@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Price-Analyzer: Advanced Amazon Web Scraper
 
-## Getting Started
+**Price-Analyzer** is a cutting-edge Amazon web scraper designed to extract and monitor detailed product data, including price fluctuations, from Amazon listings. This tool is perfect for developers, data analysts, and e-commerce enthusiasts who want to stay ahead of price trends and make informed purchasing decisions.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Comprehensive Data Extraction**: Scrapes product titles, prices, images, availability status, and more from Amazon product pages.
+- **Price History Tracking**: Maintains a detailed history of price changes, allowing you to analyze trends over time.
+- **Automated Price Alerts**: Sends email notifications when significant price changes are detected, ensuring you never miss a deal.
+- **Scheduled Data Updates**: Leverages cron jobs to automatically update product data and price information at regular intervals.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Built with **Next.js** and **React** for a dynamic, responsive UI.
+  - Components include a hero carousel, search bar, and product cards.
+  - **Image Optimization**: Utilizes the Next.js `Image` component for fast and optimized image rendering.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Backend**: Powered by **Node.js** and **Express**, with data management via **MongoDB**.
+  - **Web Scraping**: Utilizes **Axios** and **Cheerio** for efficient data extraction from Amazon pages.
+  - **Data Processing**: Custom utilities for price extraction, category identification, and currency conversion.
+  - **Email Notifications**: Integrated with **Resend** to send alerts based on price changes.
 
-## Learn More
+- **Database**: **MongoDB** is used to store product data, price history, and user information securely.
+  - **Mongoose** is employed for schema modeling and data validation.
 
-To learn more about Next.js, take a look at the following resources:
+- **Proxy Handling**: Incorporates **BrightData** proxy for reliable and anonymous scraping.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/your-username/price-analyzer.git
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navigate to the project directory:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   cd price-analyzer
+   ```
+
+3. Install the necessary dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure your environment variables in a `.env` file:
+
+   ```env
+   username=your-brightdata-username
+   password=your-brightdata-password
+   host=your-brightdata-host
+   ```
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## 📝 Usage
+
+1. **Add Products**: Enter Amazon product URLs into the system to start tracking.
+2. **View Data**: Use the frontend interface to explore product details and monitor price trends.
+3. **Set Alerts**: Configure email notifications for price changes to stay updated on deals.
+
+## 🔄 Contributing
+
+Contributions are welcome! If you have suggestions for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request. Your input helps make **Price-Analyzer** better for everyone.
